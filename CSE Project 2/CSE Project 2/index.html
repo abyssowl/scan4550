@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HeartScan</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/9d1286f048.js" crossorigin="anonymous"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Javascript for toggle button to function -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $(".toggle").on("click", function() {
+
+        if ($(".item").hasClass("active")) {
+          $(".item").removeClass("active");
+        } else {
+          $('.item').addClass("active");
+        }
+      })
+    });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Title Section -->
+  <section id="title">
+    <!-- Navbar -->
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a class="img-logo" href="#"><img src="images/Heart-logo.png" alt="Heart Scan" /></a></li>
+        <li class="item"><a href="#">Contact</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item btn"><a href="login.html">Login</a></li>
+        <li class="item btn secondary"><a href="signup.html">Sign Up</a></li>
+        <li class="toggle"><span class="bars"></span></li>
+      </ul>
+    </nav>
+
+
+
+    <!-- Title Image and Slogan -->
+    <div class="row">
+      <div class="slogan-div">
+        <h1 class="big-heading">Every Scan Matters.</h1>
+      </div>
+
+      <div class="title-img">
+        <img class="title-image" src="images/Heartscan.png" alt="Heartscan">
+      </div>
+
+
+    </div>
+  </section>
+
+ <!-- About Us Section -->
+  <section class="Middle">
+    <hr>
+    <p>
+      There was a reason for her shyness. Everyone assumed it had always been there but she knew better. She knew the exact moment that the shyness began. It had been that fateful moment at the lake. There are just some events that do that to you.
+      There are only three ways to make this work. The first is to let me take care of everything. The second is for you to take care of everything. The third is to split everything 50 / 50. I think the last option is the most preferable, but I'm
+      certain it'll also mean the end of our marriage.
+      Debbie put her hand into the hole, sliding her hand down as far as her arm could reach. She wiggled her fingers hoping to touch something, but all she felt was air. She shifted the weight of her body to try and reach an inch or two more down
+      the hole. Her fingers still touched nothing but air.
+      He had done everything right. There had been no mistakes throughout the entire process. It had been perfection and he knew it without a doubt, but the results still stared back at him with the fact that he had lost.
+    </p>
+  </section>
+
+<!-- Footer Section for the copyright and contact -->
+  <footer id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-square"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope-square"></i>
+      <p>© Copyright 2021 💕HeartScan</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
