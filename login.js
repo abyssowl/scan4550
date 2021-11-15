@@ -54,33 +54,13 @@ function login(){
     })
 }
 
-//function for sending email to user to reset password
 
-function resetPass(){
-    var auth = firebase.auth();
-    emailReset = document.getElementById('forgottenPassEmail').value;
-/*
-   if(validField(emailReset) == false){
-       window.alert("PLease fill out specified field.");
-       return;
-   } else if(validEmail(emailReset) == false){
-       window.alert("Invalid Email");
-       return;
-   }*/
-    auth.sendPasswordResetEmail(emailReset).then(function(){
-        window.alert("Email has been sent. Please go verify.");
-        console.log("success");
-    })
-    .catch(function(error){
-        //alert of errors
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        window.alert(errorMessage);
-    })
-
-}
-
-
+//Handle Account Status
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = 'patient.html'; //After successful login, user will be redirected to home.html
+  }
+});
 
 
 //validating if email input is actually an email
@@ -104,40 +84,3 @@ function validPassword(password){
         return true
     }
 }
-
-
-//checking that each field is filled out
-function validField(field){
-    if(field == null){
-        return false
-    }
-    if(field.length <= 0){
-        return false
-    } else {
-        return true
-    }
-}
-//forgot password modal
-var modal = document.getElementById("forgotModal");
-
-var forgotPassBtn = document.getElementById("forgot-pass");
-
-//span element that closes modal
-var span = document.getElementsByClassName("close")[0];
-
-//when user clicks button display modal
-forgotPassBtn.onclick = function(){
-    modal.style.display = "block";
-}
-
-//when user clicks on x close 
-span.onclick = function(){
-    modal.style.display = "none";
-}
-/*
-//user clicks anywhere out of modal close it 
-window.onclick = function(event){
-    if(event.target == modal){
-        modal.style.display = "none";
-    }
-}*/

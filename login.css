@@ -14,8 +14,15 @@ img {
   position: absolute;
   height: 100px;
   width: 200px;
-  margin-left: 44%;
+  transform: translate(-50%, -50%);
   margin-top: 0;
+  top: 10%;
+  left: 50%;
+}
+
+.img-logo:hover {
+  text-shadow: 0 0 20px #1F51FF;
+  filter: brightness(2);
 }
 
 .login-box {
@@ -84,7 +91,7 @@ footer {
 #button-container {
   padding-bottom: 25px;
 }
-.btn {
+button {
   border: none;
   width: 100%;
   outline: none;
@@ -96,7 +103,7 @@ footer {
   border-radius: 20px;
 }
 
-.btn:hover {
+button:hover {
   cursor: pointer;
   background: transparent;
   border-color: #fe019a;
@@ -117,85 +124,13 @@ footer {
 }
 
 .login-box a{
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   padding: 2px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
   color: darkgrey;
 }
 
 .login-box a:hover {
   color: #ffc107;
-}
-#forgot-pass{
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  padding: 2px;
-  border:none;
-  background: none;
-  font-size: 12px;
-  line-height: 20px;
-  color: darkgrey;
-}
-
-#forgot-pass:hover {
-  cursor: pointer;
-  color: #ffc107;
-}
-
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /*background: #2B2B2B;*/
-
-}
-
-.modal-content {
-  background: #181616;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  opacity: 0.99;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #fe019a;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-btn {
-  border: none;
-  width: 40%;
-  outline: none;
-  height: 30px;
-  background: #fe019a;
-  box-shadow: 0 0 20px #fe019a;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 20px;
-}
-
-.modal-btn:hover {
-  cursor: pointer;
-  background: transparent;
-  border-color: #fe019a;
-  border-style: solid;
 }

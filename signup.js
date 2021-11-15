@@ -20,7 +20,7 @@ const database = firebase.database()
 
 function submitInfo(){
     //get all input fields
-    userType= document.querySelector('input[name = "user-type"]').value;
+    userType= document.querySelector('input[name = "user-type"]:checked').value;
     firstName = document.getElementById('firstname').value;
     lastName = document.getElementById('lastname').value;
     //userName = document.getElementById('username').value;
@@ -34,7 +34,7 @@ function submitInfo(){
         alert('Please specify whether you are a doctor or a patient.');
     } else if(validField(firstName) == false && validField(lastName) == false && validField(email) == false && validField(password) ==false){
         alert('Please complete the required fields.')
-    }else  if(validField(firstName) == false || validField(lastName) == false){ 
+    }else  if(validField(firstName) == false || validField(lastName) == false){
         //checks if all fields are filled out
         alert('Please fill out all fields.');
     }else if(validEmail(email) == false){
@@ -50,7 +50,7 @@ function submitInfo(){
         alert('Passwords do not match');
         return
     }
-  
+
     //Authorize User
 
     auth.createUserWithEmailAndPassword(email,password).then(function(){
